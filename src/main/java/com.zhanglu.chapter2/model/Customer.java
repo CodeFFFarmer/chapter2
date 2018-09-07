@@ -6,7 +6,7 @@ package com.zhanglu.chapter2.model;
 public class Customer {
 
     /**
-     *
+     * id
      */
     private long id;
 
