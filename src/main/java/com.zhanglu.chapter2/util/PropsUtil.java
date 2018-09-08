@@ -14,18 +14,18 @@ public class PropsUtil {
 
     /**
      * 加载属性文件
-     * @param filename
+     * @param fileName
      * @return
      */
-    public static Properties loadProps(String filename) {
+    public static Properties loadProps(String fileName) {
         Properties props = null;
         InputStream is = null;
         try {
-            is = Thread.currentThread().getContextClassLoader().getResourceAsStream(filename);
+            is = Thread.currentThread().getContextClassLoader().getResourceAsStream(fileName);
             if (is == null) {
                 throw  new FileNotFoundException(fileName+"file is not found!");
             }
-            props Properties();
+            props = new Properties();
             props.load(is);
         } catch (IOException e) {
             LOGGER.error("load properties file failure", e);
@@ -38,5 +38,6 @@ public class PropsUtil {
                 }
             }
         }
+        return props;
     }
 }
