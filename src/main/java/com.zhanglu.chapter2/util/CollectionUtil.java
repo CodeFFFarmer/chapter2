@@ -26,7 +26,7 @@ public final class CollectionUtil {
     }
 
     /**
-     * 判断 Map 是否为空
+     * 判断 Map 是否为空1
      */
     public static boolean isEmpty(Map<?, ?> map) {
         return MapUtils.isEmpty(map);
